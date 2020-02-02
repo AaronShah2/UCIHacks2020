@@ -1,0 +1,32 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <title>Hello, world!</title>
+  </head>
+<body style = "background-color: mediumspringgreen">
+
+<div class="jumbotron text-center">
+  <h1>Business Boss</h1>
+  <p>Become the leader of your own finances.</p>
+</div>
+<!-- Creates login page -->
+<form mehtod = "post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type = "submit" class = "btn btn-primary"
+        style ="background-color: mediumpurple"
+    >
+        Register
+    </button>
+</form>
+{% endblock content %}

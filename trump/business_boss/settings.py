@@ -26,17 +26,20 @@ SECRET_KEY = '4c0iq_9*!&c1xg=ke8vh)5*q-c)$00%#9h(frsf_%%^0wskc7='
 DEBUG = True
 ALLOWED_HOSTS = []
 
+# prevents mimetype error from occuring with css sheets
+
+
 
 # Application definition
 
 INSTALLED_APPS = [
-    'boss.apps.BossConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'boss.apps.BossConfig',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +121,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+AUTH_USER_MODEL = 'boss.CustomUser'
